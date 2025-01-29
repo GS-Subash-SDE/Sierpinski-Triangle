@@ -40,17 +40,20 @@ can.addEventListener('click', (e) => {
 function drawOnce(prevPoint) {
   
   let randPoint, midPoint;
-
+ 
   for (let i = 0; i < 100000; i++){
-    randPoint = triArr[randIndex(0, 3)];
-
-    midPoint = new Point(
-      (prevPoint.x + randPoint.x) / 2,
-      (prevPoint.y + randPoint.y) / 2
-    );
-
-    midPoint.draw();
-    prevPoint = midPoint;
+    setTimeout(() => {
+      
+      randPoint = triArr[randIndex(0, 3)];
+      
+      midPoint = new Point(
+        (prevPoint.x + randPoint.x) / 2,
+        (prevPoint.y + randPoint.y) / 2
+      );
+      
+      midPoint.draw();
+      prevPoint = midPoint;
+    },3000)
   }
 }
 
