@@ -53,7 +53,7 @@ function drawOnce(prevPoint) {
       
       midPoint.draw();
       prevPoint = midPoint;
-    },3000)
+    },1000)
   }
 }
 
